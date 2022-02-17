@@ -1,0 +1,22 @@
+(define (problem aliens1)
+	(:domain aliens)
+	(:init
+		(= (ship-x) 40.0)
+		(= (drone1-x) 40.0)
+		(= (drone2-x) 40.0)
+		(= (drone2-y) 700.0)
+		(= (drone1-y) 700.0)
+		(= (ship-y) 700.0)
+		(drone2-first-undock)
+		(first-time)
+		(drone1-first-undock)
+	)
+	(:goal (and
+		(london-bombed)
+	)
+)
+)
+(:metric minimize (+
+		(* 1 (total-time))
+)
+)
